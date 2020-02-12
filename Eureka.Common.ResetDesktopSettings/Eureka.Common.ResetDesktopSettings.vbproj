@@ -1,0 +1,1197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49E99B01-38AE-4125-AF1C-99DDC0AFC7DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Eureka.Common.ResetDesktopSettings</RootNamespace>
+    <AssemblyName>Eureka.Common.ResetDesktopSettings</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Eureka.Common.ResetDesktopSettings.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Eureka.Common.ResetDesktopSettings.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sage.Accounting.CardProcessing.Client">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.CardProcessing.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.COM">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.COM.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Commercials">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Commercials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Common.Forms">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Common.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Common.PersistentObjects">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Common.PersistentObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Contracts.Actions">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Contracts.Actions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Contracts.POP">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Contracts.POP.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Contracts.TimesheetsAndExpenses">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Contracts.TimesheetsAndExpenses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.DataModel">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.DataModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Exceptions.Commercials">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Exceptions.Commercials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Exceptions.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Exceptions.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Exceptions.Financials">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Exceptions.Financials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Exceptions.Manufacturing.Legacy">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Exceptions.Manufacturing.Legacy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Exceptions.People">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Exceptions.People.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Exceptions.ProjectCosting">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Exceptions.ProjectCosting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Exceptions.ProjectCosting.Billing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Exceptions.ProjectCosting.Billing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Exceptions.TSE">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Exceptions.TSE.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Financials">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Financials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.IM.CellPresenters">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.IM.CellPresenters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.IM.CRMModel">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.IM.CRMModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.IM.Queries">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.IM.Queries.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Integration.CRM">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Integration.CRM.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.InternetSubmissions">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.InternetSubmissions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.InternetSubmissions.Payroll">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.InternetSubmissions.Payroll.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Locks.Commercials">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Locks.Commercials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Locks.ProjectCosting">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Locks.ProjectCosting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Locks.TimesheetAndExpenses">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Locks.TimesheetAndExpenses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Manufacturing.Legacy">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Manufacturing.Legacy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.People">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.People.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.PersistentObjects">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.PersistentObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.ProjectCosting">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.ProjectCosting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Reporting">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Reporting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.SagePayments">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.SagePayments.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.TimesheetAndExpenses">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.TimesheetAndExpenses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.Tracking">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.Tracking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.TransientDataModel">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.TransientDataModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Accounting.TransientReportingModel">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Accounting.TransientReportingModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.BankingCloud.Client">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.BankingCloud.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.BankingCloud.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.BankingCloud.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.Amendability">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.Amendability.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.ApplicationInterface">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.ApplicationInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.Contracts">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.Controls">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.Design">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.DynamicLinq">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.DynamicLinq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.DynamicToolbarWrapper">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.DynamicToolbarWrapper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.FormDesigner">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.FormDesigner.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.Integration">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.Integration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.Interop">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.Interop.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.LinqExpandable">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.LinqExpandable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.LinqExtensions">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.LinqExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.Printing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.Printing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.Schemas">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.Schemas.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.ScreenCustomiser">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.ScreenCustomiser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.Style.WPF">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.Style.WPF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Common.UI">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Common.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.CP.GUI">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.CP.GUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Data">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Data.ModelManagement">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Data.ModelManagement.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Data.Queries">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Data.Queries.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Designer">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Designer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Desktop.Lists">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Desktop.Lists.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Desktop.Survey">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Desktop.Survey.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Desktop.WebWorkspace">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Desktop.WebWorkspace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Desktop.Workspace">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Desktop.Workspace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Expressions">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Expressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Expressions.Sage200">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Expressions.Sage200.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Framework.Common.UI">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Framework.Common.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Framework.Diagnostics">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Framework.Diagnostics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Framework.SData">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Framework.SData.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Framework.System">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Framework.System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Help">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Help.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Hub.Client">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Hub.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IdentityModel.Claims.Sage200">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IdentityModel.Claims.Sage200.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IdentityModel.Tokens.SageID">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IdentityModel.Tokens.SageID.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IdentityProvider.Bootstrap">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IdentityProvider.Bootstrap.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IdentityProvider.SageID">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IdentityProvider.SageID.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IdentityProvider.SessionContext">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IdentityProvider.SessionContext.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IdentityProvider.Windows">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IdentityProvider.Windows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IntegratedPayments.Model">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IntegratedPayments.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IntegratedPayments.Service.Client">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IntegratedPayments.Service.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Integration.SagePayrollProvider">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Integration.SagePayrollProvider.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IO">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IO.Cloud.ReportingFileSystem">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IO.Cloud.ReportingFileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.IO.Local">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.IO.Local.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.AccountsBusinessObjects">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.AccountsBusinessObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.AccountsBusinessObjects.Sage200">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.AccountsBusinessObjects.Sage200.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.BusinessObjects">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.BusinessObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.BusinessObjects.Sage200">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.BusinessObjects.Sage200.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Common.UI">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Common.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Common.UI.Sage200">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Common.UI.Sage200.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Controls">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Controls.Sage200">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Controls.Sage200.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.DataModel">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.DataModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Forms">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Forms.Sage200">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Forms.Sage200.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.IM.Queries">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.IM.Queries.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.AccountsLayer">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.AccountsLayer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Base">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.BusinessObjects.Allocations">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.BusinessObjects.Allocations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.BusinessObjects.AttachedFiles">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.BusinessObjects.AttachedFiles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.BusinessObjects.BOM">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.BusinessObjects.BOM.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.BusinessObjects.Estimates">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.BusinessObjects.Estimates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.BusinessObjects.LabourRegister">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.BusinessObjects.LabourRegister.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.BusinessObjects.MachineRegister">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.BusinessObjects.MachineRegister.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.BusinessObjects.Planning">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.BusinessObjects.Planning.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.BusinessObjects.Wop">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.BusinessObjects.Wop.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Data.Connections">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Data.Connections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Data.Connections.Manufacturing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Data.Connections.Manufacturing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Data.Connections.MMS">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Data.Connections.MMS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.DataModel">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.DataModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.DesktopLists">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.DesktopLists.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Exceptions">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Exceptions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Factories">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Factories.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Allocations">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Allocations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.BOM">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.BOM.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Certificates">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Certificates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Drawings">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Drawings.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Estimates">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Estimates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Expenses">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Expenses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Labour">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Labour.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Lookups">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Lookups.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Machines">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Machines.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Operations">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Operations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Planning">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Planning.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Popup">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Popup.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Prospects">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Prospects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.Utilities">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Forms.WOP">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Forms.WOP.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.IM.CellPresenters">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.IM.CellPresenters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.IM.Queries">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.IM.Queries.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Integration">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Integration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.PersistentObjects">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.PersistentObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Preferences">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Preferences.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.Reports">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.Reports.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Legacy.View">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Legacy.View.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.LegacyData.Broker">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.LegacyData.Broker.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Logging">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Logging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.PersistentObjects">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.PersistentObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Reporting">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Reporting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Reporting.Sage200">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Reporting.Sage200.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Sage200">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Sage200.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.TransientDataModel">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.TransientDataModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Manufacturing.Views">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Manufacturing.Views.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Admin.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Admin.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Admin.Contracts">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Admin.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Admin.LoggingAppender">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Admin.LoggingAppender.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.CashBook">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.CashBook.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Connect">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Connect.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Controls">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Controls.Commercials">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Controls.Commercials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Controls.Manufacturing.Legacy">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Controls.Manufacturing.Legacy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Controls.People">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Controls.People.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Controls.ProjectCosting">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Controls.ProjectCosting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Controls.ProjectCosting.Billing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Controls.ProjectCosting.Billing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Controls.SagePayments">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Controls.SagePayments.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Controls.TimesheetAndExpenses">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Controls.TimesheetAndExpenses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Desktop.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Desktop.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Desktop.Integration.Remote">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Desktop.Integration.Remote.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.ExcelFinancialStatements">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.ExcelFinancialStatements.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Exceptions">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Exceptions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Exceptions.Commercials">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Exceptions.Commercials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Exceptions.Manufacturing.Legacy">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Exceptions.Manufacturing.Legacy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Exceptions.People">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Exceptions.People.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Exceptions.ProjectCosting">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Exceptions.ProjectCosting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Exceptions.ProjectCosting.Billing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Exceptions.ProjectCosting.Billing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Exceptions.TimesheetAndExpenses">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Exceptions.TimesheetAndExpenses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Expenses">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Expenses.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.FixedAssets">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.FixedAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Integration.CRM">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Integration.CRM.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Invoicing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Invoicing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Launcher">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Launcher.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Manufacturing.Legacy">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Manufacturing.Legacy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Messenger">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Messenger.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.NominalLedger">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.NominalLedger.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.OrderProcessing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.OrderProcessing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Payroll.Link">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Payroll.Link.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.POP">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.POP.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.PriceBook">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.PriceBook.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.ProjectCosting">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.ProjectCosting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.PurchaseLedger">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.PurchaseLedger.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.SAA.AdminClient">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.SAA.AdminClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.SAA.Client">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.SAA.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.SAA.Client.ServiceProxy">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.SAA.Client.ServiceProxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.SagePayments">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.SagePayments.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.SalesLedger">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.SalesLedger.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Security">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.SOP">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.SOP.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Stock">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Stock.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.SystemManager">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.SystemManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.SystemManager.Commercials">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.SystemManager.Commercials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Timesheets">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Timesheets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.Trader">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.Trader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.View.Controls">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.View.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.View.Data">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.View.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMS.View.Helper">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMS.View.Helper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.AddOnManagement.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.AddOnManagement.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.AddOnManagement.RemoteClient">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.AddOnManagement.RemoteClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.AddOnPackager">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.AddOnPackager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.AddOns">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.AddOns.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.AddOnWizards">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.AddOnWizards.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.Controls">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.Controls.Wizard">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.Controls.Wizard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.DataSource.Plugins">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.DataSource.Plugins.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.DBEngine.SQL">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.DBEngine.SQL.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.DbLayer">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.DbLayer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.DBSchema">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.DBSchema.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.Extensibility">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.Extensibility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.Kernel">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.Licensing.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.Licensing.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.ManifestSchema">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.ManifestSchema.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.ManifestSchema.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.ManifestSchema.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.Menus">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.Menus.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.MMCSnapIn">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.MMCSnapIn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.Packager">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.Packager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.SDBX">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.SDBX.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.Surveys">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.Surveys.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.TaskManagement">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.TaskManagement.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.UserPreferences">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.UserPreferences.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MMSAdmin.Util">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MMSAdmin.Util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MSOffice.Contracts">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MSOffice.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.MSOffice.Integration">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.MSOffice.Integration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.ObjectStore">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.ObjectStore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.ObjectStore.Builder">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.ObjectStore.Builder.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.ObjectStore.Controls">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.ObjectStore.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.ObjectStore.Controls.WPF">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.ObjectStore.Controls.WPF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Query.Engine">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Query.Engine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Query.Engine.DataProvider.LegacyManufacturing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Query.Engine.DataProvider.LegacyManufacturing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Query.Engine.DataProvider.Linq">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Query.Engine.DataProvider.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Query.Engine.DataProvider.Linq.Common">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Query.Engine.DataProvider.Linq.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Query.Engine.DataProvider.Linq.LocalExecution">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Query.Engine.DataProvider.Linq.LocalExecution.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Query.Engine.DataProvider.Manufacturing">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Query.Engine.DataProvider.Manufacturing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Query.Engine.Model">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Query.Engine.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Query.Extensions">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Query.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.QueryEditor">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.QueryEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Reporting.Conversion.RepLayer">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Reporting.Conversion.RepLayer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Reporting.Engine">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Reporting.Engine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Reporting.Engine.Integration">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Reporting.Engine.Integration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Reporting.Model">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Reporting.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Reporting.Services">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Reporting.Services.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Reporting.Services.VFS">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Reporting.Services.VFS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Styling">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Styling.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Suite">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Suite.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.UI">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Utils">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Utils.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Validation">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Validation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Web.Cloud.Contracts">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Web.Cloud.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Web.Common.Contracts">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Web.Common.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Web.SageBankCloud.Contracts">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Web.SageBankCloud.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Web.SageCardProcessing.Contracts">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Web.SageCardProcessing.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Web.WTE.Queries">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Web.WTE.Queries.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Workspace.Core">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Workspace.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sage.Xml">
+      <HintPath>C:\Utilities\Assemblies 2017\Sage.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SageID.OAuthClient.WPFForm">
+      <HintPath>C:\Utilities\Assemblies 2017\SageID.OAuthClient.WPFForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SageID.OAuthClientLibrary">
+      <HintPath>C:\Utilities\Assemblies 2017\SageID.OAuthClientLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SageID.OAuthClientLibrary.Interfaces">
+      <HintPath>C:\Utilities\Assemblies 2017\SageID.OAuthClientLibrary.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Sprache, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sprache.2.2.0\lib\net45\Sprache.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FormStateFileTreeView.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ResetDesktopSettings.Designer.vb">
+      <DependentUpon>ResetDesktopSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ResetDesktopSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetDesktopSettings.resx">
+      <DependentUpon>ResetDesktopSettings.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EurekaIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
